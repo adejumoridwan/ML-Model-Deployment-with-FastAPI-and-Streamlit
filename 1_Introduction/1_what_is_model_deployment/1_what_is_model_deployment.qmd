@@ -1,0 +1,41 @@
+---
+title: "What is Model Deployment?"
+author: "Adejumo Ridwan Suleiman"
+format: revealjs
+---
+
+
+## What is Model Deployment?
+
+* Taking a trained machine learning model from development to production.
+* Integrating it into applications, websites, or services.
+* Enabling the model to interact with real-world data and make predictions.
+
+## Why is it Important?
+
+* Transforms theoretical insights into practical solutions.
+* Delivers tangible business value through automation and data-driven decision making.
+* Provides feedback for continuous model improvement through interaction with real-world data.
+
+## Key Steps in Deployment:
+
+* Model packaging and optimization.
+* Infrastructure selection and configuration.
+* Integration with existing systems and applications.
+* Monitoring and performance evaluation.
+
+## Model Deployment LifeCycle
+
+![*Source: https://towardsdatascience.com/deploying-machine-learning-models-with-heroku-4dec1df87f71*](model_lifecycle.jpg)
+
+
+## Model Deployment Stage
+
+![*Source: https://towardsdatascience.com/deploying-machine-learning-models-with-heroku-4dec1df87f71*](deployment_stage.jpg)
+
+## Challenges and Considerations:
+
+* Scalability and resource management.
+* Security and data privacy.
+* Model explainability and bias detection.
+* Continuous monitoring and updating.
