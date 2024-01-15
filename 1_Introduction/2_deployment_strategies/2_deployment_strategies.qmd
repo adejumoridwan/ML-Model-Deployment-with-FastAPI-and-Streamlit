@@ -1,0 +1,205 @@
+---
+title: "Deployment Strategies"
+author: "Adejumo Ridwan Suleiman"
+format: revealjs
+---
+
+
+## Model Pipeline?
+
+![Source: https://arxiv.org/pdf/2103.08937.pdf](ml_pipeline.jpg)
+
+## Deployment Strategies
+
+- Static Strategy - Distribution of traffic or requests are handled manually.
+- Dynamic Strategy - Distribution of trafiic or requests are handled automatically.
+
+## Stratic Strategy
+
+- Shadow Deployment
+- A/B Evaluation
+- Canary
+- Rolling Update
+- Blue Green 
+
+
+## Dynamic Strategy 
+
+- Multi Armed Bandit
+
+## Shadow Deployment
+
+- A model is placed in shadow with another model in production.
+- When a new prediction request is made, both model execute the request without interrupting each other.
+
+## Shadow Deployment
+
+![Source: https://rihab-feki.medium.com/mlops-03-continuous-deployment-modes-that-you-should-know-8c48463190bb](shadow_deployment.jpg)
+
+## Shadow Deployment
+
+### Pros
+
+- Efficient.
+- Easy to Monitor
+
+### Cons
+
+- High Cost
+- Resource Intensive
+
+## Shadow Deployment
+
+### Use Cases
+
+- Model comparison.
+- Model pipeline evaluation
+
+## A/B Evaluation
+
+- Model evaluation in a controlled environment
+- Distribute incoming traffic between two models.
+- Used mostly with e-commerce and social media platforms.
+
+## A/B Evaluation
+
+![Source: https://www.tensorops.ai/post/ml-model-deployment-strategies](a_and_b.jpg)
+
+## A/B Evaluation
+
+### Pros
+
+- Efficient and simple
+- Easy to identify low performing models
+- Optimizes user experience
+
+### Cons
+
+- Less reliable for complex models
+- Resource and time intensive
+
+## A/B Evaluation
+
+### Use cases
+
+- E-commerce platforms
+- Social media platforms
+- Streaming platforms
+- Comparison between two models
+
+## Multi Armed Bandit
+
+- Advanced version of A/B testing
+- Chooses a model user traffic based on Key Performance Index(KPI).
+- Model with best KPI is deployed globally.
+
+## Multi Armed Bandit
+
+![Source: https://www.tensorops.ai/post/ml-model-deployment-strategies](mab.jpg)
+
+## Multi Armed Bandit
+
+### Pros
+
+- Efficient optimization
+- Resource allocation
+
+### Cons
+
+- Expensive and time consuming
+- Complex to setup
+
+
+## Multi Armed Bandit
+
+### Use cases
+
+- Streaming platforms
+- Have more than two models to compare
+
+## Blue - Green Deployment 
+
+- Involves two production environment
+- One is the live model and the other is the new model version.
+
+## Blue - Green Deployment 
+
+![Source: https://semaphoreci.com/blog/blue-green-deployment](blue_green.jpg)
+
+## Blue - Green Deployment 
+
+### Pros
+
+- Rollbacks are easy
+- Less deployment risk
+- Ensures application availability
+
+### Cons
+
+- Expensive and resource intensive.
+
+## Blue - Green Deployment 
+
+### Use cases
+  
+- Avoiding downtime
+- Continous Integration and Continous deployment
+
+## Canary
+
+- Some users have access to the new model version.
+- The number of users for the new model version is increased or decreased based on test results.
+- If model is successful in test phase, it is rolled out.
+
+## Canary
+
+![Source: https://rihab-feki.medium.com/mlops-03-continuous-deployment-modes-that-you-should-know-8c48463190bb](canary_deployment.jpg)
+
+## Canary
+
+### Pros
+
+- Cheaper 
+- No downtime
+- Easier testingn and rollout
+
+### Cons
+
+- Slow rollouts
+- Easier testing
+
+## Canary
+
+### Use case
+
+- Used with real life data
+
+## Rolling Deployment
+
+- Gradual update and replacement of older version of the model.
+- No staging or private deployment.
+- Rapidly a model without any downtime.
+
+## Rolling Deployment
+
+![Source: https://towardsdatascience.com/ml-model-deployment-strategies-72044b3c1410](rolling.jpg)
+
+## Rolling Deployment
+
+### Pros
+
+- Minimal downtime 
+- Incremental update
+- Faster
+
+### Cons
+
+- Takes time
+- Complex to setup
+
+## When to use a model deployment strategy?
+
+- For testing on real data, use shadow evaluation strategy.
+- For simple model changes, use A/B testing.
+- Zero downtime use Canary deployment.
+- To gradually deploy the new version of the model, use rolling deployment.
