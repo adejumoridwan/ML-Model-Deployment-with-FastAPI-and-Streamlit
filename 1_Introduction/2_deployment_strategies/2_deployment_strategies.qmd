@@ -111,7 +111,7 @@ format: revealjs
 
 
 ## Multi Armed Bandit
-
+z
 ### Use cases
 
 - Streaming platforms
@@ -161,12 +161,11 @@ format: revealjs
 
 - Cheaper 
 - No downtime
-- Easier testingn and rollout
+- Easier testing and rollout
 
 ### Cons
 
 - Slow rollouts
-- Easier testing
 
 ## Canary
 
