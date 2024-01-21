@@ -1,0 +1,18 @@
+## Query Parameters
+
+other function parameters not part of the path parameters are known as query parameters.
+
+```
+from fastapi import FastAPI
+
+app = fastAPI()
+
+dl_models = [{"model_1": "Alexnet"}, {"model_2": "U-net"}]
+
+@app.get("/models/")
+async def read_models(skip: int = 0, limit: int = 10):
+    return dl_models[skip: skip + limit]
+```
+
+- They are declared as strings but `int` forces them to be integers.
+- They can be optional and have default values.

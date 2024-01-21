@@ -1,6 +1,6 @@
 ## Path Parameters
 
-you can pass a variable to the path, anything you pass in the path will come out of item_id in the function return value.
+you can pass a variable to the path, anything you pass in the path will come out of student_id in the function return value.
 
 ```
 from fastapi import FastAPI
