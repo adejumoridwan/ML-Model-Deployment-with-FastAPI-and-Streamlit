@@ -1,0 +1,7 @@
+
+- request body is data sent by client to the api
+- response body is data sent by the api to the client
+
+- Pydantic is the most widely used data validation library for Python.
+
+- use pydantic models to declare a request body
