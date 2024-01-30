@@ -47,7 +47,28 @@ async def update_lecturer(lecturer_id: int, student: Student, lecturer: Lecturer
     }
     return results
 
-#Singular values in body
+
+# Singular values in body
 """
 importance: Annotated[int, Body()]
 """
+
+# adding validation and metadata to pydantic models
+# field is imported from pydantic and not from fastapi so is other attributes also
+
+
+class Item(BaseModel):
+    name: str
+    description: str | None = Field(
+        default=None, title="The description of the item", max_length=300
+    )
+    price: float = Field(gt=0, description="The price must be greater than zero")
+    tax: float | None = None
+
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
+    results = {"item_id": item_id, "item": item}
+    return results
+
+# Nested Models
