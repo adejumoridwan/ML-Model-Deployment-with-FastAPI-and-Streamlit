@@ -1,25 +1,27 @@
-from fastapi import FastAPI, Query, Path
 from typing import Annotated
+
+from fastapi import FastAPI, Path, Body
+from pydantic import BaseModel, Field
 
 app = FastAPI()
 
 
-@app.get("/students/")
-async def read_students(
-    first_name: Annotated[str | None, Query(max_length=5, min_length=3)] = None
-):
-    results = {"student_id": 238754, "surname": "Nicholas"}
-    if first_name:
-        results.update({"first_name": first_name})
-    return results
+class Student(BaseModel):
+    name: str = Field(default=None, max_length=20)
+    sex: str
+    age: float = Field(ge=0, description="The age of a student", le=20)
+    score: float | None = None
 
 
-@app.get("/items/{item_id}")
-async def read_items(
-    item_id: Annotated[int, Path(title="The ID of the item to get", ge=40, le=100)],
-    q: Annotated[str | None, Query(alias="item-query")] = None,
+@app.post("/students/{student_id}")
+async def update_student(
+    student_id: Annotated[int, Path(title="The student id", ge=0, le=100)],
+    bmi: float | None = None,
+    student: Annotated[Student | None, Body()] = None,
 ):
-    results = {"item_id": item_id}
-    if q:
-        results.update({"q": q})
+    results = {"student_id": student_id}
+    if bmi:
+        results.update({"bmi": bmi})
+    if student:
+        results.update({"student": student})
     return results
