@@ -1,4 +1,3 @@
-"""
-Link to the weather model api project
+# Link to the weather model api project
+
 https://github.com/adejumoridwan/WeatherModelAPI
-"""
