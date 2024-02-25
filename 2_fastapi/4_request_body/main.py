@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from pydantic import BaseModel
 
 
@@ -14,16 +15,16 @@ app = FastAPI()
 
 
 @app.post("/students/")
-async def create_student(student: Student):
+async def create_students(student: Student):
     return student
 
 
 @app.post("/students/bmi/{student_id}")
-async def create_student_bmi(student: Student, student_id: str, course: str):
+async def create_student_bmi(
+    student: Student, student_id: str, weight: float, height: float
+):
     student_model = student.model_dump()
-    if student.height and student.weight:
-        bmi = student.weight / student.height**2
-        student_model.update(
-            {"bmi": bmi}, {"student_id": student_id}, {"course": course}
-        )
+    if weight and height:
+        bmi = weight / height**2
+        student_model.update({"bmi": bmi})
     return student_model
