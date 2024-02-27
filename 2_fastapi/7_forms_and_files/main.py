@@ -13,20 +13,4 @@ async def login(
 
 @app.post("/files/")
 async def create_file(file: UploadFile):
-    if not file:
-        return {"message": "No upload file sent"}
-    else:
-        return {"filename": file.filename}
-
-
-@app.post("/files-to/")
-async def create_file(
-    file: Annotated[bytes, File()],
-    token: Annotated[str, Form()],
-    fileb: Annotated[UploadFile, File()] = None,
-):
-    return {
-        "file_size": len(file),
-        "token": token,
-        "fileb_content_type": fileb.content_type,
-    }
+    return {"filename": file.filename}
