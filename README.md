@@ -1,6 +1,8 @@
 # ML-Model-Deployment-with-FastAPI-and-Streamlit
 
-## Why Deploy Models?
+
+This is the github repository for the scripts used in my course [ML-Model-Deployment-with-FastAPI-and-Streamlit](https://www.udemy.com/course/draft/5763328/?referralCode=F5A92CE034F17099C9F0)
+### Why Deploy Models?
 
 Machine learning models aren't just for show - they're meant to be used in the real world. By deploying your model, you can make it accessible to users who can benefit from its insights and predictions. There are several reasons why you should deploy your model:
 
