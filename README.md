@@ -36,15 +36,7 @@ In this section, you will delve into the concept of model deployment, exploring 
 
 **Building APIs with FastAPI**
 
-In this section, you'll grasp the essence of building APIs with FastAPI. We'll begin by delving into the basics of creating APIs using this powerful Python framework. You'll comprehend how to leverage Path and Query parameters effectively, along with their diverse validation techniques.
-
-Next, we'll explore the concept of the request body, shedding light on how to craft APIs to receive form and file requests from clients. This will empower you to gather and process data from various sources seamlessly.
-
-Moreover, we'll delve into the realm of templates and static files, equipping you with the skills to present your API's functionalities in a user-friendly and visually appealing manner.
-
-Finally, we'll emphasize the significance of testing your API applications. We'll guide you through setting up a testing environment, writing comprehensive test cases, and implementing best practices to ensure the sustainability and maintainability of your APIs.
-
-By the end of this section, you'll possess a solid understanding of building robust and scalable APIs using FastAPI. You'll be able to design, develop, and test your API applications with confidence, ensuring they meet the demands of the modern web.
+This section dives deep into building APIs with FastAPI, covering essential concepts like handling various parameters, receiving data inputs, and crafting user-friendly interfaces. You'll learn how to create APIs that accept and process diverse data from various sources while ensuring their quality and maintainability through effective testing practices. By the end, you'll be equipped to build robust and scalable APIs, confident in their ability to meet modern web requirements.
 
 **ML Models as an API with FastAPI**
 
